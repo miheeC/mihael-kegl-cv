@@ -84,7 +84,7 @@ export default function CvPage() {
         <div className="cv-grid second">
           <div className="cv-main">
             <section>
-              <h2>Selected project</h2>
+              <h2>Latest project</h2>
               <QaSquad />
             </section>
           </div>

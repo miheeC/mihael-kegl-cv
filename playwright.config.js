@@ -6,6 +6,9 @@ export default defineConfig({
   timeout: 120_000,
   fullyParallel: true,
   workers: 3, // each test renders WebGL; more than a few at once starves the CPU
+  // Installed Chrome occasionally hangs on launch (about 1 in 40 here), before any page loads.
+  // One retry covers that; a test that needed it is reported as "flaky", not hidden.
+  retries: 1,
   reporter: [['list']],
   use: {
     baseURL: 'http://localhost:4173',

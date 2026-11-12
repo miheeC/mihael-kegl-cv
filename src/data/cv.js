@@ -71,6 +71,7 @@ export const cv = {
       'Nothing gets filed without a human: each bug arrives with repro steps and a screenshot, and one question: file it, or decline?',
       'Approved bugs go to Victor, the developer agent, who reproduces, fixes, verifies in the browser and opens a draft PR.',
       'After every run the orchestrator feeds what was filed and rejected back into the knowledge base.',
+      'I wrote about it on LinkedIn, where the post reached 20,000+ impressions.',
     ],
     quote: 'With the right AI agents, one QA engineer can cover what used to take a whole team.',
   },
@@ -137,10 +138,6 @@ export const cv = {
     {
       title: 'Accessibility in software: a standard, not an afterthought',
       note: 'On WCAG’s four principles and why accessibility checks belong next to functional testing. “Accessible products are better products, for everyone.”',
-    },
-    {
-      title: 'Meet QA Squad',
-      note: 'How one QA engineer runs five AI QA agents across five projects in parallel. Reached 20,000+ impressions on LinkedIn.',
     },
   ],
 };
