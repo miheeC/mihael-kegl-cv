@@ -72,7 +72,7 @@ export const cv = {
       'Approved bugs go to Victor, the developer agent, who reproduces, fixes, verifies in the browser and opens a draft PR.',
       'After every run the orchestrator feeds what was filed and rejected back into the knowledge base.',
     ],
-    quote: 'I don’t think AI replaces QA engineers. I think it turns one QA engineer into an entire QA department.',
+    quote: 'With the right AI agents, one QA engineer can cover what used to take a whole team.',
   },
 
   skills: [
