@@ -1,0 +1,24 @@
+{
+  "name": "mihael-kegl-portfolio",
+  "private": true,
+  "version": "8.4.0",
+  "type": "module",
+  "description": "Release Blocker: catch 8 bugs on a 3D desk to read Mihael Kegl's CV.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "share": "vite build && vite preview",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "vite": "^8.3.8"
+  }
+}
