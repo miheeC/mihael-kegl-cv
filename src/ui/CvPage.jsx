@@ -1,5 +1,5 @@
 import { cv } from '../data/cv.js';
-import { Education, Projects, Publication, Role, Skills } from './SectionContent.jsx';
+import { Education, Numbers, Projects, Publication, Role, Skills, Writing } from './SectionContent.jsx';
 
 export default function CvPage() {
   return (
@@ -28,6 +28,9 @@ export default function CvPage() {
           <ul className="cv-contact">
             <li>
               <a href={cv.linkedin}>{cv.linkedinLabel}</a>
+            </li>
+            <li>
+              <a href={`mailto:${cv.email}`}>{cv.email}</a>
             </li>
             <li>{cv.location}</li>
             <li>{cv.availability}</li>
@@ -74,18 +77,14 @@ export default function CvPage() {
           </div>
           <aside className="cv-side">
             <section>
+              <h2>In numbers</h2>
+              <Numbers />
+            </section>
+
+            <section>
               <h2>Speaking and publications</h2>
               <Publication />
-            </section>
-            <section>
-              <h2>Writing</h2>
-              {cv.writing.map((w) => (
-                <div className="role" key={w.title}>
-                  <h4>{w.title}</h4>
-                  <p className="role-company">LinkedIn post</p>
-                  <p>{w.note}</p>
-                </div>
-              ))}
+              <Writing />
             </section>
 
             <section>

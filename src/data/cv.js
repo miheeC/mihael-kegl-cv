@@ -6,10 +6,11 @@ export const cv = {
   location: 'Ormož, Slovenia',
   linkedin: 'https://www.linkedin.com/in/mihaelkegl/',
   linkedinLabel: 'linkedin.com/in/mihaelkegl',
+  email: 'miha.kegl@gmail.com',
   availability: 'Open to work: on-site, hybrid or remote',
 
   summary: [
-    'QA Team Lead with 8+ years in software quality at Databox, from building the end-to-end automation suite to leading QA for the relaunch of an AI-native analytics platform.',
+    'QA Team Lead with 8+ years in software quality at Databox, an agentic analytics platform: from building the end-to-end automation suite to leading QA for its AI-native relaunch.',
     'Today I build agentic QA: AI agents that test every feature from different angles with Playwright and Claude Code, while a human decides what gets filed.',
   ],
 
@@ -19,16 +20,28 @@ export const cv = {
     { value: 'OTS 2025', label: 'conference speaker and co-author' },
   ],
 
+  // Shown in the CV sidebar. Sources: Asana, the Katalon, Playwright and QA Squad repos.
+  numbers: [
+    { value: '11,000+', label: 'bug and improvement tickets filed in Asana' },
+    { value: '540+', label: 'Katalon test cases written and maintained' },
+    { value: '260+', label: 'Playwright test cases written and maintained' },
+    { value: '480+', label: 'issues found by QA Squad' },
+    { value: '20,000+', label: 'impressions on the QA Squad post' },
+  ],
+
   experience: [
     {
       id: 'lead',
       role: 'Quality Assurance Team Lead',
       company: 'Databox',
+      companyNote: 'Agentic analytics platform',
       period: 'May 2026 – Present',
       bullets: [
         'Built QA Squad, an agentic QA framework where AI QA agents test every feature from different angles and a developer agent prepares fixes, while a human decides what gets filed.',
         'Built an AI-assisted Playwright testing framework with the QA team: Claude Code skills turn plain-language user stories into verified tests.',
-        'Led QA on all critical projects while managing the QA team: planned the testing, decided who tests what and moved QA capacity to where the risk was.',
+        'Led QA on all projects and managed a QA team of three: planned the testing, assigned the work and moved capacity to where the risk was.',
+        'Tested Genie, the product’s LLM-based AI analyst. Its answers are non-deterministic, so the tests check outcomes, not exact wording.',
+        'Fixed bugs I found in the product code: 10+ merged pull requests.',
       ],
     },
     {
@@ -37,8 +50,9 @@ export const cv = {
       company: 'Databox',
       period: 'Jul 2021 – Apr 2026',
       bullets: [
-        'Introduced a shift-left QA process, bringing QA into requirements and design reviews and validating every release with regression and smoke testing.',
+        'Introduced a shift-left QA process, bringing QA into requirements and design reviews, with regression and smoke testing on every release.',
         'Owned release testing for web and mobile, and was the go-to QA for the product’s most critical areas.',
+        'Set up k6 load tests for the product’s API endpoints.',
         'Presented the company’s QA approach at the OTS 2025 conference and co-authored the published paper.',
         'Onboarded and mentored new QA engineers.',
       ],
@@ -73,7 +87,12 @@ export const cv = {
       'Nothing gets filed without a human: each bug arrives with repro steps and a screenshot, and one question: file it, or decline?',
       'Approved bugs go to Victor, the developer agent, who reproduces, fixes, verifies in the browser and opens a draft PR.',
       'After every run the orchestrator feeds what was filed and rejected back into the knowledge base.',
-      'I wrote about it on LinkedIn, where the post reached 20,000+ impressions.',
+      'Built with Claude Code skills and subagents, a Python dashboard, and the Chrome DevTools, Figma and Asana MCP servers.',
+      {
+        text: 'I wrote about it on LinkedIn, where the post reached 20,000+ impressions:',
+        url: 'https://lnkd.in/p/dwdew_te',
+        urlLabel: 'lnkd.in/p/dwdew_te',
+      },
     ],
     quote: 'With the right AI agents, one QA engineer can cover what used to take a whole team.',
   },
@@ -119,7 +138,7 @@ export const cv = {
     {
       id: 'playwright',
       title: 'Playwright and Claude Code',
-      period: '2026 – Present',
+      period: '2026',
       intro:
         'A framework built with the QA team, where Claude Code skills turn plain-language user stories into verified Playwright tests. 260+ end-to-end tests so far; my own coverage includes the AI analyst, metrics, signup and login, user roles and client accounts.',
     },
@@ -135,7 +154,6 @@ export const cv = {
         'Regression and smoke testing',
         'End-to-end testing',
         'API testing',
-        'Integration testing',
         'Mobile testing',
         'Accessibility testing',
         'Performance testing',
@@ -151,8 +169,6 @@ export const cv = {
         'Selenium',
         'Katalon Studio',
         'k6',
-        'Postman',
-        'Page Object Model',
         'CI/CD',
         'GitHub Actions',
         'Git',
@@ -171,7 +187,7 @@ export const cv = {
         'Prompt engineering',
       ],
     },
-    { group: 'Code', items: ['TypeScript', 'JavaScript', 'Node.js', 'Python', 'CSS', 'D3.js', 'MongoDB'] },
+    { group: 'Code', items: ['TypeScript', 'JavaScript', 'Node.js', 'Python', 'HTML/CSS', 'D3.js', 'MongoDB'] },
     { group: 'Product tools', items: ['Jira', 'Asana', 'Figma', 'Mixpanel', 'Stripe'] },
     { group: 'Leadership', items: ['Team leadership', 'Mentoring', 'Public speaking', 'Quality management'] },
   ],
@@ -192,6 +208,7 @@ export const cv = {
   languages: [
     { name: 'Slovenian', level: 'Native' },
     { name: 'English', level: 'Full professional proficiency' },
+    { name: 'Serbo-Croatian', level: 'Conversational' },
   ],
 
   publication: {
@@ -207,6 +224,9 @@ export const cv = {
   writing: [
     {
       title: 'Accessibility in software: a standard, not an afterthought',
+      venue: 'LinkedIn post',
+      url: 'https://lnkd.in/p/d2YvqmtG',
+      urlLabel: 'lnkd.in/p/d2YvqmtG',
       note: 'On WCAG’s four principles and why accessibility checks belong next to functional testing. “Accessible products are better products, for everyone.”',
     },
   ],

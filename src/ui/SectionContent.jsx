@@ -7,7 +7,10 @@ export function Role({ job }) {
         <h4>{job.role}</h4>
         <span className="role-period">{job.period}</span>
       </div>
-      <p className="role-company">{job.company}</p>
+      <p className="role-company">
+        {job.company}
+        {job.companyNote && ` · ${job.companyNote}`}
+      </p>
       <ul className="bullets">
         {job.bullets.map((b) => (
           <li key={b}>{b}</li>
@@ -79,9 +82,18 @@ export function QaSquad() {
         ))}
       </ul>
       <ul className="bullets">
-        {s.notes.map((n) => (
-          <li key={n}>{n}</li>
-        ))}
+        {s.notes.map((n) =>
+          typeof n === 'string' ? (
+            <li key={n}>{n}</li>
+          ) : (
+            <li key={n.text}>
+              {n.text}{' '}
+              <a className="inline-link" href={n.url} target="_blank" rel="noreferrer">
+                {n.urlLabel}
+              </a>
+            </li>
+          ),
+        )}
       </ul>
     </div>
   );
@@ -120,6 +132,34 @@ export function Publication() {
         {p.urlLabel}
       </a>
     </div>
+  );
+}
+
+/** Posts and articles, listed under the conference paper. */
+export function Writing() {
+  return cv.writing.map((w) => (
+    <div className="role" key={w.title}>
+      <h4>{w.title}</h4>
+      <p className="role-company">{w.venue}</p>
+      <p>{w.note}</p>
+      <a className="role-link" href={w.url} target="_blank" rel="noreferrer">
+        {w.urlLabel}
+      </a>
+    </div>
+  ));
+}
+
+/** Headline figures for the CV sidebar. */
+export function Numbers() {
+  return (
+    <ul className="numbers">
+      {cv.numbers.map((n) => (
+        <li key={n.label}>
+          <b>{n.value}</b>
+          <span>{n.label}</span>
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -185,13 +225,7 @@ export default function SectionContent({ section }) {
       return (
         <>
           <Publication />
-          {cv.writing.map((w) => (
-            <div className="role" key={w.title}>
-              <h4>{w.title}</h4>
-              <p className="role-company">LinkedIn post</p>
-              <p>{w.note}</p>
-            </div>
-          ))}
+          <Writing />
         </>
       );
     case 'contact':
