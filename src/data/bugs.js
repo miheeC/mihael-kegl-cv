@@ -24,7 +24,7 @@ export const bugs = [
     color: '#ffb627',
     behavior: 'Flickers in and out. Click it while it is invisible and the test “passes”.',
     lesson:
-      'A test that passes by luck teaches a team to ignore red. Mihael started the Databox end-to-end suite in his first weeks and kept it trustworthy for five years: 1,900+ commits, 640+ test cases, deployment gates included.',
+      'A test that passes by luck teaches a team to ignore red. Mihael started the Databox end-to-end suite in his first weeks and kept it trustworthy for six years: 1,900+ commits, 640+ test cases, deployment gates included.',
     section: 'automation',
     sectionTitle: 'Test automation',
     hint: 'Flaky Test: look for an amber glow that blinks. Click while it is lit.',
@@ -96,7 +96,7 @@ export const bugs = [
     lesson:
       'If part of your audience cannot read it, it is a bug, however good it looks. Mihael wrote about why accessibility checks belong next to functional testing, taught his visual QA agent to measure contrast in light and dark mode, and co-authored the QA paper presented at OTS 2025.',
     section: 'speaking',
-    sectionTitle: 'Speaking and writing',
+    sectionTitle: 'Speaking and publications',
     hint: 'Low Contrast: switch on “Contrast check” in the top bar.',
   },
   {

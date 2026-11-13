@@ -35,7 +35,7 @@ Every push to `main` builds the site and publishes it to GitHub Pages (`.github/
 | Race Condition | Two racers; catching one catches both | Projects: QA Squad, the AI-assisted Playwright framework and the Feature Dependency Visualizer |
 | Edge Case | Walks the outer sides of the desk, so you may need to rotate | Skills |
 | Memory Leak | Grows over time and leaves a trail | Education and languages |
-| Low Contrast | Camouflaged until you switch on the contrast check | Speaking and writing |
+| Low Contrast | Camouflaged until you switch on the contrast check | Speaking and publications |
 | Heisenbug | Appears last, runs from the cursor, caught on the third try | Contact |
 
 The game is keyboard playable: Tab to a ticket chip and press Enter to swat that bug. It respects `prefers-reduced-motion`, and the CV is always one click away for anyone who would rather not play.

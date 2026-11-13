@@ -189,7 +189,7 @@ export default function SectionContent({ section }) {
           {cv.summary.map((p) => (
             <p key={p}>{p}</p>
           ))}
-          <ul className="facts">
+          <ul className="facts two">
             {cv.facts.map((f) => (
               <li key={f.label}>
                 <b>{f.value}</b>

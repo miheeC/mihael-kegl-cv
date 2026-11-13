@@ -29,7 +29,6 @@ export default function Intro({ onStart }) {
         <li>About 2 minutes</li>
         <li>Drag to rotate</li>
         <li>Click or tap a bug to catch it</li>
-        <li>Keyboard: Tab to a ticket, Enter to swat</li>
       </ul>
     </section>
   );

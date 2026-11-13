@@ -20,10 +20,15 @@ export default function CvPage() {
 
       <main className="paper">
         <header className="cv-head">
-          <div>
-            <h1>{cv.name}</h1>
-            <p className="cv-title">{cv.title}</p>
-            <p className="cv-headline">{cv.headline}</p>
+          <div className="cv-id">
+            {cv.photo && (
+              <img className="cv-photo" src={cv.photo} alt={`Portrait of ${cv.name}`} width="360" height="360" />
+            )}
+            <div>
+              <h1>{cv.name}</h1>
+              <p className="cv-title">{cv.title}</p>
+              <p className="cv-headline">{cv.headline}</p>
+            </div>
           </div>
           <ul className="cv-contact">
             <li>

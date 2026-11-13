@@ -1,6 +1,11 @@
 // Single source of truth for the CV. The game tickets, the CV page and the PDF all read from here.
+// Shown on the Profile ticket and in the CV's "In numbers", so the figure cannot drift between them.
+const ticketsFiled = { value: '11,000+', label: 'bug and improvement tickets filed in Asana' };
+
 export const cv = {
   name: 'Mihael Kegl',
+  // Square crop in public/, shown as a circle in the CV header.
+  photo: './mihael-kegl.jpg',
   title: 'QA Team Lead',
   headline: 'Agentic QA and AI-driven test automation · Playwright · Claude Code',
   location: 'Ormož, Slovenia',
@@ -18,12 +23,13 @@ export const cv = {
     { value: '8+', label: 'years in software quality' },
     { value: '3', label: 'roles at Databox, QA Engineer to Team Lead' },
     { value: 'OTS 2025', label: 'conference speaker and co-author' },
+    ticketsFiled,
   ],
 
   // Shown in the CV sidebar. Sources: Asana, the Katalon, Playwright and QA Squad repos.
   numbers: [
-    { value: '11,000+', label: 'bug and improvement tickets filed in Asana' },
-    { value: '540+', label: 'Katalon test cases written and maintained' },
+    ticketsFiled,
+    { value: '640+', label: 'Katalon test cases written and maintained' },
     { value: '260+', label: 'Playwright test cases written and maintained' },
     { value: '480+', label: 'issues found by QA Squad' },
     { value: '20,000+', label: 'impressions on the QA Squad post' },
@@ -37,11 +43,11 @@ export const cv = {
       companyNote: 'Agentic analytics platform',
       period: 'May 2026 – Present',
       bullets: [
-        'Built QA Squad, an agentic QA framework where AI QA agents test every feature from different angles and a developer agent prepares fixes, while a human decides what gets filed.',
-        'Built an AI-assisted Playwright testing framework with the QA team: Claude Code skills turn plain-language user stories into verified tests.',
+        'Built QA Squad, an agentic QA framework that cut the testing of each feature from weeks to hours and has found 480+ issues: AI QA agents test every feature from different angles and a developer agent prepares fixes, while a human decides what gets filed.',
+        'Built an AI-assisted Playwright framework with the QA team: Claude Code skills let everyone write and fix tests as plain-English user stories.',
         'Led QA on all projects and managed a QA team of three: planned the testing, assigned the work and moved capacity to where the risk was.',
         'Tested Genie, the product’s LLM-based AI analyst. Its answers are non-deterministic, so the tests check outcomes, not exact wording.',
-        'Fixed bugs I found in the product code: 10+ merged pull requests.',
+        'Fixed smaller bugs I found in the product code: 15+ merged PRs.',
       ],
     },
     {
@@ -50,11 +56,11 @@ export const cv = {
       company: 'Databox',
       period: 'Jul 2021 – Apr 2026',
       bullets: [
-        'Introduced a shift-left QA process, bringing QA into requirements and design reviews, with regression and smoke testing on every release.',
-        'Owned release testing for web and mobile, and was the go-to QA for the product’s most critical areas.',
+        'Introduced shift-left QA: bugs are found in specs and designs before any code is written, with regression and smoke testing on every release.',
+        'Owned the weekly web and mobile releases, got every small bug and improvement in them fixed, and was the go-to QA for critical areas.',
         'Set up k6 load tests for the product’s API endpoints.',
         'Presented the company’s QA approach at the OTS 2025 conference and co-authored the published paper.',
-        'Onboarded and mentored new QA engineers.',
+        'Onboarded and mentored 7 QA engineers.',
       ],
     },
     {
@@ -63,7 +69,7 @@ export const cv = {
       company: 'Databox',
       period: 'Aug 2018 – Jun 2021',
       bullets: [
-        'Built the end-to-end test automation framework in Katalon Studio (Selenium) covering the majority of product features, deployment gates and third-party integrations.',
+        'Built the end-to-end automation framework in Katalon Studio (Selenium) and grew it to 640+ test cases with 80 integration suites, run as deployment gates and periodically on staging and production.',
         'Tested every feature before release, reported the bugs I found and owned each one until it was fixed.',
         'Wrote product specs and analysed thousands of new-user session recordings to propose product improvements.',
         'Started a company-wide initiative for collecting and fixing small product-polish issues.',
@@ -117,10 +123,10 @@ export const cv = {
       title: 'Feature Dependency Visualizer',
       period: '2024',
       intro:
-        'An internal tool I built so QA engineers and product managers can see how product features depend on each other.',
+        'An internal tool I built so QA engineers and product managers can see how product features depend on each other, and which ones a change will affect.',
       bullets: [
         'Interactive graph and matrix of 50+ features, with every dependency rated strong, medium or weak and explained in plain language.',
-        'Pick the feature that changed and the time you have: it generates a test plan that splits the time across the features most likely to break.',
+        'Pick the feature that changed and the time you have: it generates a test plan that splits the time across the features most likely to break. The same dependency map gives AI the context to write test plans.',
         'Built with D3, Node.js and MongoDB.',
       ],
     },
@@ -133,14 +139,14 @@ export const cv = {
       title: 'Katalon and Selenium',
       period: '2018 – 2024',
       intro:
-        'Started the end-to-end suite in my first weeks at Databox and grew it to 640+ test cases across the core product, deployment gates and 80 third-party integration suites.',
+        'Started the end-to-end suite in my first weeks at Databox and grew it to 640+ test cases across the core product and 80 third-party integration suites, run as deployment gates and periodically on staging and production.',
     },
     {
       id: 'playwright',
       title: 'Playwright and Claude Code',
       period: '2026',
       intro:
-        'A framework built with the QA team, where Claude Code skills turn plain-language user stories into verified Playwright tests. 260+ end-to-end tests so far; my own coverage includes the AI analyst, metrics, signup and login, user roles and client accounts.',
+        'A framework built with the QA team, where Claude Code skills turn plain-language user stories into verified Playwright tests. I have written 260+ end-to-end tests with it so far, covering the AI analyst, metrics, signup and login, user roles and client accounts.',
     },
   ],
 
