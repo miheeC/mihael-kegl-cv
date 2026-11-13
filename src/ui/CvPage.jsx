@@ -1,5 +1,5 @@
 import { cv } from '../data/cv.js';
-import { Publication, QaSquad, Role, Skills } from './SectionContent.jsx';
+import { Projects, Publication, Role, Skills } from './SectionContent.jsx';
 
 export default function CvPage() {
   return (
@@ -84,8 +84,8 @@ export default function CvPage() {
         <div className="cv-grid second">
           <div className="cv-main">
             <section>
-              <h2>Latest project</h2>
-              <QaSquad />
+              <h2>Projects</h2>
+              <Projects />
             </section>
           </div>
           <aside className="cv-side">

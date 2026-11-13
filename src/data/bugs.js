@@ -10,7 +10,7 @@ export const bugs = [
     color: '#ff6b6b',
     behavior: 'Slow, obvious, sitting in plain sight. It still ships more often than anyone admits.',
     lesson:
-      'Small polish issues add up. At Databox, Mihael started a company-wide initiative for collecting and fixing exactly this kind of thing.',
+      'The small stuff is what users notice first. In 2020 Mihael started “Small steps to make Databox perfect”, a list where anyone in the company could report a polish issue. He still files the typos himself: the latest was “prority support”.',
     section: 'profile',
     sectionTitle: 'Profile',
     hint: 'Typo: right in front of the laptop, in plain sight.',
@@ -24,9 +24,9 @@ export const bugs = [
     color: '#ffb627',
     behavior: 'Flickers in and out. Click it while it is invisible and the test “passes”.',
     lesson:
-      'A suite is only useful if people trust it. Mihael built the Databox end-to-end automation suite, deployment gates included.',
-    section: 'engineer',
-    sectionTitle: 'Experience · 2018 – 2021',
+      'A test that passes by luck teaches a team to ignore red. Mihael started the Databox end-to-end suite in his first weeks and kept it trustworthy for five years: 1,900+ commits, 640+ test cases, deployment gates included.',
+    section: 'automation',
+    sectionTitle: 'Test automation',
     hint: 'Flaky Test: look for an amber glow that blinks. Click while it is lit.',
   },
   {
@@ -37,9 +37,10 @@ export const bugs = [
     severity: 'Critical',
     color: '#b388ff',
     behavior: 'You fix it, it comes back. This one has to be caught twice.',
-    lesson: 'This is why every release Mihael owned was validated with regression and smoke testing.',
-    section: 'senior',
-    sectionTitle: 'Experience · 2021 – 2026',
+    lesson:
+      'You only notice what came back if you remember what was there before. Mihael has tested the same product for eight years, in three roles, and every release he owned went out behind regression and smoke tests.',
+    section: 'experience',
+    sectionTitle: 'Experience · 2018 – now',
     hint: 'Regression: purple, on the right side of the desk. It comes back once.',
   },
   {
@@ -51,9 +52,9 @@ export const bugs = [
     color: '#3fd9ff',
     behavior: 'Two bugs sprinting laps around the desk. Catch either one: it was the same bug all along.',
     lesson:
-      'Parallel work needs coordination. Mihael’s QA Squad runs five AI agents per project, kept in sync by an orchestrator.',
-    section: 'lead',
-    sectionTitle: 'Experience · 2026 – now',
+      'Parallel work collides unless something coordinates it. Mihael’s QA Squad runs five AI agents on one feature at the same time, each in its own browser, with an orchestrator keeping them in sync.',
+    section: 'projects',
+    sectionTitle: 'Projects',
     hint: 'Race Condition: two blue streaks doing laps. Click just ahead of one.',
   },
   {
@@ -64,7 +65,8 @@ export const bugs = [
     severity: 'Medium',
     color: '#ff9f43',
     behavior: 'Never on the happy path. It walks the outer edge of the desk, so you may have to rotate the view to find it.',
-    lesson: 'Finding these takes range: a wide toolbox, and the habit of looking where nobody else does.',
+    lesson:
+      'Edge cases sit where nobody thinks to look: an 80,000-character paste, a 201-character search, an end date before the start date. All three are real tickets of Mihael’s. Finding them takes a wide toolbox and the habit of doing what no user is supposed to do.',
     section: 'skills',
     sectionTitle: 'Skills',
     hint: 'Edge Case: drag to rotate the desk and check its outer sides.',
@@ -77,7 +79,8 @@ export const bugs = [
     severity: 'Medium',
     color: '#7be36b',
     behavior: 'Starts tiny, keeps growing and leaves a trail. Easy to ignore until it is enormous.',
-    lesson: 'Spotting slow growth early takes solid fundamentals. These are Mihael’s.',
+    lesson:
+      'Nobody notices a leak on day one. Catching slow problems early means understanding what happens underneath the UI, and that comes from fundamentals. These are Mihael’s.',
     section: 'education',
     sectionTitle: 'Education and languages',
     hint: 'Memory Leak: follow the green trail.',
@@ -91,7 +94,7 @@ export const bugs = [
     color: '#ff5fd2',
     behavior: 'Almost the same colour as the desk mat. It fails WCAG 1.4.3 until you switch on the contrast check.',
     lesson:
-      'Mihael writes and speaks about quality, accessibility included: “accessible products are better products, for everyone.”',
+      'If part of your audience cannot read it, it is a bug, however good it looks. Mihael wrote about why accessibility checks belong next to functional testing, taught his visual QA agent to measure contrast in light and dark mode, and co-authored the QA paper presented at OTS 2025.',
     section: 'speaking',
     sectionTitle: 'Speaking and writing',
     hint: 'Low Contrast: switch on “Contrast check” in the top bar.',
@@ -105,7 +108,7 @@ export const bugs = [
     color: '#e9e4ff',
     behavior: 'Runs from the cursor and vanishes the moment you observe it. The third attempt gets it.',
     lesson:
-      'The hardest thing to catch is a QA lead who can do all of the above. This one is available.',
+      'Some bugs stay labelled “needs reproduce” for weeks. Harder to catch still: a QA lead who builds the automation, runs the AI agents and still files the typos. This one is available.',
     section: 'contact',
     sectionTitle: 'Contact',
     hint: 'Heisenbug: keep clicking it. It gives up on the third try.',

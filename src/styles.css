@@ -813,6 +813,24 @@ button {
   font-size: 15px;
 }
 
+/* On the Projects ticket the squad comes first, so the title above it is divider enough. */
+.reveal-title + .squad {
+  padding-top: 0;
+  border-top: 0;
+}
+
+/* Entry intros match the squad's body size, so the two read as one list of projects. */
+.entry > p {
+  font-size: 15px;
+}
+
+/* A project listed after the squad gets the divider instead. */
+.squad + .role {
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
 .agents {
   display: grid;
   gap: 4px;
@@ -951,6 +969,12 @@ blockquote {
 .paper .squad {
   border-top: 0;
   padding-top: 0;
+}
+
+.paper .squad + .role {
+  margin-top: 14px;
+  padding-top: 0;
+  border-top: 0;
 }
 
 .paper .role + .role {
@@ -1187,6 +1211,7 @@ blockquote {
 
   .bullets,
   .squad,
+  .entry > p,
   .plain {
     font-size: 12px;
   }

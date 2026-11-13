@@ -59,6 +59,9 @@ test('CV page lists every role and links to a PDF that exists', async ({ page, r
   for (const role of ['Quality Assurance Team Lead', 'Senior Quality Assurance Engineer', 'Quality Assurance Engineer']) {
     await expect(page.getByRole('heading', { name: role, exact: true })).toBeVisible();
   }
+  for (const project of ['QA Squad', 'Feature Dependency Visualizer']) {
+    await expect(page.getByRole('heading', { name: project, exact: true })).toBeVisible();
+  }
   const href = await page.getByRole('link', { name: 'Download PDF' }).getAttribute('href');
   const pdf = await request.get(new URL(href, page.url()).toString());
   expect(pdf.status()).toBe(200);
@@ -101,7 +104,9 @@ test('full hunt with the mouse: every bug behaves as its ticket says', async ({ 
     expect(await state(page, 'flaky')).toBe('active');
     await page.waitForFunction(() => window.__releaseBlocker.byId.flaky.opacity > 0.9);
     expect(await clickBug(page, 'flaky', { tries: 20 })).toBe(true);
-    await expectTicket(page, 'Flaky Test');
+    const dialog = await expectTicket(page, 'Flaky Test');
+    await expect(dialog).toContainText('Katalon and Selenium');
+    await expect(dialog).toContainText('Playwright and Claude Code');
     await closeTicket(page);
   });
 
@@ -113,7 +118,10 @@ test('full hunt with the mouse: every bug behaves as its ticket says', async ({ 
     await expect(page.locator('.toast')).toContainText('is back');
     expect(await clickBug(page, 'regression')).toBe(true);
     const dialog = await expectTicket(page, 'Regression');
-    await expect(dialog).toContainText('Senior Quality Assurance Engineer');
+    // The whole career sits on this one ticket.
+    for (const role of ['Quality Assurance Team Lead', 'Senior Quality Assurance Engineer', 'Quality Assurance Engineer']) {
+      await expect(dialog.getByRole('heading', { name: role, exact: true })).toBeVisible();
+    }
     await closeTicket(page);
   });
 
@@ -121,6 +129,7 @@ test('full hunt with the mouse: every bug behaves as its ticket says', async ({ 
     expect(await clickBug(page, 'race', { index: 1 })).toBe(true);
     const dialog = await expectTicket(page, 'Race Condition');
     await expect(dialog).toContainText('QA Squad');
+    await expect(dialog).toContainText('Feature Dependency Visualizer');
     await closeTicket(page);
   });
 

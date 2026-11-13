@@ -76,6 +76,39 @@ export const cv = {
     quote: 'With the right AI agents, one QA engineer can cover what used to take a whole team.',
   },
 
+  projects: [
+    {
+      id: 'fdv',
+      title: 'Feature Dependency Visualizer',
+      period: '2024',
+      intro:
+        'An internal tool I built so QA engineers and product managers can see how product features depend on each other.',
+      bullets: [
+        'Interactive graph and matrix of 50+ features, with every dependency rated strong, medium or weak and explained in plain language.',
+        'Pick the feature that changed and the time you have: it generates a test plan that splits the time across the features most likely to break.',
+        'Built with D3, Node.js and MongoDB.',
+      ],
+    },
+  ],
+
+  // Shown on the Flaky Test ticket only; the CV page covers automation under Experience.
+  automation: [
+    {
+      id: 'katalon',
+      title: 'Katalon and Selenium',
+      period: '2018 – 2024',
+      intro:
+        'Started the end-to-end suite in my first weeks at Databox and grew it to 640+ test cases across the core product, deployment gates and 80 third-party integration suites.',
+    },
+    {
+      id: 'playwright',
+      title: 'Playwright and Claude Code',
+      period: '2026 – Present',
+      intro:
+        'AI-written Playwright tests on seeded accounts. My coverage: the AI analyst, metrics, signup and login, user roles and client accounts.',
+    },
+  ],
+
   skills: [
     {
       group: 'Testing',

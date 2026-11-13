@@ -30,9 +30,9 @@ Every push to `main` builds the site and publishes it to GitHub Pages (`.github/
 | Bug | How it behaves | Reveals |
 | --- | --- | --- |
 | Typo | Slow and in plain sight | Profile |
-| Flaky Test | Flickers; only catchable while lit | QA Engineer, 2018 – 2021 |
-| Regression | Comes back once after you catch it | Senior QA Engineer, 2021 – 2026 |
-| Race Condition | Two racers; catching one catches both | QA Team Lead and QA Squad |
+| Flaky Test | Flickers; only catchable while lit | Test automation |
+| Regression | Comes back once after you catch it | Experience, all three roles |
+| Race Condition | Two racers; catching one catches both | Projects: QA Squad and the Feature Dependency Visualizer |
 | Edge Case | Walks the outer sides of the desk, so you may need to rotate | Skills |
 | Memory Leak | Grows over time and leaves a trail | Education and languages |
 | Low Contrast | Camouflaged until you switch on the contrast check | Speaking and writing |

@@ -17,6 +17,38 @@ export function Role({ job }) {
   );
 }
 
+/** A titled entry with an optional period, intro and bullets: a project, or an automation era. */
+export function Entry({ item }) {
+  return (
+    <div className="role entry">
+      <div className="role-head">
+        <h4>{item.title}</h4>
+        {item.period && <span className="role-period">{item.period}</span>}
+      </div>
+      {item.intro && <p>{item.intro}</p>}
+      {item.bullets && (
+        <ul className="bullets">
+          {item.bullets.map((b) => (
+            <li key={b}>{b}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+/** QA Squad first, then the other projects. Shared by the Projects ticket and the CV page. */
+export function Projects() {
+  return (
+    <>
+      <QaSquad />
+      {cv.projects.map((p) => (
+        <Entry item={p} key={p.id} />
+      ))}
+    </>
+  );
+}
+
 export function QaSquad() {
   const s = cv.qaSquad;
   return (
@@ -85,8 +117,6 @@ export function ContactLinks() {
   );
 }
 
-const job = (id) => cv.experience.find((e) => e.id === id);
-
 /** The slice of the CV a ticket reveals. */
 export default function SectionContent({ section }) {
   switch (section) {
@@ -110,16 +140,12 @@ export default function SectionContent({ section }) {
           </ul>
         </>
       );
-    case 'engineer':
-    case 'senior':
-      return <Role job={job(section)} />;
-    case 'lead':
-      return (
-        <>
-          <Role job={job('lead')} />
-          <QaSquad />
-        </>
-      );
+    case 'automation':
+      return cv.automation.map((a) => <Entry item={a} key={a.id} />);
+    case 'experience':
+      return cv.experience.map((e) => <Role job={e} key={e.id} />);
+    case 'projects':
+      return <Projects />;
     case 'skills':
       return <Skills />;
     case 'education':
