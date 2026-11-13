@@ -188,7 +188,7 @@ export const cv = {
       ],
     },
     { group: 'Code', items: ['TypeScript', 'JavaScript', 'Node.js', 'Python', 'HTML/CSS', 'D3.js', 'MongoDB'] },
-    { group: 'Product tools', items: ['Jira', 'Asana', 'Figma', 'Mixpanel', 'Stripe'] },
+    { group: 'Product tools', items: ['Asana', 'Confluence', 'Figma', 'Mixpanel', 'Kibana', 'Stripe'] },
     { group: 'Leadership', items: ['Team leadership', 'Mentoring', 'Public speaking', 'Quality management'] },
   ],
 
