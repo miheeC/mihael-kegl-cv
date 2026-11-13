@@ -17,6 +17,19 @@ export function Role({ job }) {
   );
 }
 
+/** Degrees, newest first, with the year each was awarded. */
+export function Education() {
+  return cv.education.map((e) => (
+    <div className="role" key={e.degree}>
+      <div className="role-head">
+        <h4>{e.degree}</h4>
+        <span className="role-period">{e.year}</span>
+      </div>
+      <p className="role-company">{e.school}</p>
+    </div>
+  ));
+}
+
 /** A titled entry with an optional period, intro and bullets: a project, or an automation era. */
 export function Entry({ item }) {
   return (
@@ -53,7 +66,10 @@ export function QaSquad() {
   const s = cv.qaSquad;
   return (
     <div className="squad">
-      <h4>{s.title}</h4>
+      <div className="role-head">
+        <h4>{s.title}</h4>
+        <span className="role-period">{s.period}</span>
+      </div>
       <p>{s.intro}</p>
       <ul className="agents">
         {s.agents.map((a) => (
@@ -100,6 +116,9 @@ export function Publication() {
       </div>
       <p className="role-company">{p.venue}</p>
       <p>{p.note}</p>
+      <a className="role-link" href={p.url} target="_blank" rel="noreferrer">
+        {p.urlLabel}
+      </a>
     </div>
   );
 }
@@ -151,12 +170,7 @@ export default function SectionContent({ section }) {
     case 'education':
       return (
         <>
-          {cv.education.map((e) => (
-            <div className="role" key={e.degree}>
-              <h4>{e.degree}</h4>
-              <p className="role-company">{e.school}</p>
-            </div>
-          ))}
+          <Education />
           <ul className="facts two">
             {cv.languages.map((l) => (
               <li key={l.name}>

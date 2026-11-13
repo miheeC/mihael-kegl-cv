@@ -724,6 +724,14 @@ button {
   color: var(--muted);
 }
 
+.role-link {
+  justify-self: start;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
 .bullets {
   display: grid;
   gap: 6px;
@@ -946,8 +954,12 @@ blockquote {
 .cv-main,
 .cv-side {
   display: grid;
-  gap: 28px;
+  gap: 36px;
   align-content: start;
+}
+
+.cv-grid.second {
+  margin-top: 36px;
 }
 
 .paper section {
@@ -985,6 +997,40 @@ blockquote {
   display: grid;
   gap: 4px;
   font-size: 15px;
+}
+
+/* On a wide screen the two columns flow on their own, so Projects follows Experience
+   without waiting for the taller sidebar. Print keeps the two grids: page one, page two. */
+@media screen and (min-width: 900px) {
+  .paper {
+    display: flow-root;
+  }
+
+  .cv-grid {
+    display: contents;
+  }
+
+  .cv-main,
+  .cv-side {
+    margin-top: 28px;
+  }
+
+  .cv-main {
+    float: left;
+    clear: left;
+    width: calc((100% - 44px) * 1.6 / 2.6);
+  }
+
+  .cv-side {
+    float: right;
+    clear: right;
+    width: calc((100% - 44px) / 2.6);
+  }
+
+  .cv-grid.second .cv-main,
+  .cv-grid.second .cv-side {
+    margin-top: 36px;
+  }
 }
 
 /* ---------- motion ---------- */
@@ -1101,7 +1147,7 @@ blockquote {
 
   .cv-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 36px;
   }
 
   .cv-contact {

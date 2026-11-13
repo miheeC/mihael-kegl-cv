@@ -49,7 +49,8 @@ export const cv = {
       company: 'Databox',
       period: 'Aug 2018 – Jun 2021',
       bullets: [
-        'Built the end-to-end test automation suite covering the core product, deployment gates and third-party integrations.',
+        'Built the end-to-end test automation framework in Katalon Studio (Selenium) covering the majority of product features, deployment gates and third-party integrations.',
+        'Tested every feature before release, reported the bugs I found and owned each one until it was fixed.',
         'Wrote product specs and analysed thousands of new-user session recordings to propose product improvements.',
         'Started a company-wide initiative for collecting and fixing small product-polish issues.',
       ],
@@ -58,6 +59,7 @@ export const cv = {
 
   qaSquad: {
     title: 'QA Squad',
+    period: '2026',
     intro:
       'An agentic QA framework I built. Every project or feature gets tested by five AI QA engineers, each with a different skillset, coordinated by an orchestrator and sharing one knowledge base.',
     agents: [
@@ -87,6 +89,7 @@ export const cv = {
         'The agent reads the story, finds each UI element in the live app, then writes the test and page objects. Preconditions are set up through a seed API, not by clicking through the UI.',
         'It runs the test against the live app, classifies every failure and fixes it. If the cause is an app bug, it stops and reports it instead of bending the test.',
         'When the app changes, it repairs mechanical drift on its own and asks a human whenever behaviour changed. It never makes a test pass by weakening it.',
+        'Helped connect the tests to the CI/CD pipeline: each new version of a service gets its own temporary test environment, and the tests run against it automatically.',
         '260+ end-to-end tests so far, each one adding selectors and methods to a shared library.',
       ],
     },
@@ -137,12 +140,25 @@ export const cv = {
         'Accessibility testing',
         'Performance testing',
         'Usability testing',
+        'Shift-left testing',
         'Requirements analysis',
       ],
     },
     {
       group: 'Automation',
-      items: ['Playwright', 'Selenium', 'Katalon Studio', 'k6', 'Postman', 'CI/CD', 'Git', 'Test automation frameworks'],
+      items: [
+        'Playwright',
+        'Selenium',
+        'Katalon Studio',
+        'k6',
+        'Postman',
+        'Page Object Model',
+        'CI/CD',
+        'GitHub Actions',
+        'Git',
+        'VS Code',
+        'Test automation frameworks',
+      ],
     },
     {
       group: 'AI',
@@ -155,7 +171,7 @@ export const cv = {
         'Prompt engineering',
       ],
     },
-    { group: 'Code', items: ['TypeScript', 'JavaScript', 'Python', 'CSS'] },
+    { group: 'Code', items: ['TypeScript', 'JavaScript', 'Node.js', 'Python', 'CSS', 'D3.js', 'MongoDB'] },
     { group: 'Product tools', items: ['Jira', 'Asana', 'Figma', 'Mixpanel', 'Stripe'] },
     { group: 'Leadership', items: ['Team leadership', 'Mentoring', 'Public speaking', 'Quality management'] },
   ],
@@ -164,6 +180,12 @@ export const cv = {
     {
       degree: 'Master’s degree, Telecommunications',
       school: 'Faculty of Electrical Engineering and Computer Science, University of Maribor',
+      year: '2018',
+    },
+    {
+      degree: 'Bachelor’s degree, Telecommunications',
+      school: 'Faculty of Electrical Engineering and Computer Science, University of Maribor',
+      year: '2013',
     },
   ],
 
@@ -177,7 +199,9 @@ export const cv = {
     original: 'Inovativni procesi zagotavljanja kakovosti razvoja programskih rešitev',
     venue: 'OTS 2025 Conference Proceedings, University of Maribor Press',
     date: 'Sep 2025',
-    note: 'Conference paper presented at OTS 2025 in Maribor, co-authored with Luka Prah. How to run shift-left QA in practice: QA in requirements and design, test planning, exploratory, functional and regression testing, automation with CI/CD, and retrospectives.',
+    url: 'https://doi.org/10.18690/um.feri.7.2025.18',
+    urlLabel: 'doi.org/10.18690/um.feri.7.2025.18',
+    note: 'Spoke at the OTS 2025 conference in Maribor, presenting this paper co-authored with Luka Prah. How to run shift-left QA in practice: QA in requirements and design, test planning, exploratory, functional and regression testing, automation with CI/CD, and retrospectives.',
   },
 
   writing: [

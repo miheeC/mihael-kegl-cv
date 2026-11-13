@@ -1,5 +1,5 @@
 import { cv } from '../data/cv.js';
-import { Projects, Publication, Role, Skills } from './SectionContent.jsx';
+import { Education, Projects, Publication, Role, Skills } from './SectionContent.jsx';
 
 export default function CvPage() {
   return (
@@ -59,28 +59,12 @@ export default function CvPage() {
 
             <section>
               <h2>Education</h2>
-              {cv.education.map((e) => (
-                <div className="role" key={e.degree}>
-                  <h4>{e.degree}</h4>
-                  <p className="role-company">{e.school}</p>
-                </div>
-              ))}
-            </section>
-
-            <section>
-              <h2>Languages</h2>
-              <ul className="plain">
-                {cv.languages.map((l) => (
-                  <li key={l.name}>
-                    <strong>{l.name}</strong> · {l.level}
-                  </li>
-                ))}
-              </ul>
+              <Education />
             </section>
           </aside>
         </div>
 
-        {/* Second block: starts page two of the PDF. */}
+        {/* Second block: starts page two of the PDF. On a wide screen it follows straight on. */}
         <div className="cv-grid second">
           <div className="cv-main">
             <section>
@@ -102,6 +86,17 @@ export default function CvPage() {
                   <p>{w.note}</p>
                 </div>
               ))}
+            </section>
+
+            <section>
+              <h2>Languages</h2>
+              <ul className="plain">
+                {cv.languages.map((l) => (
+                  <li key={l.name}>
+                    <strong>{l.name}</strong> · {l.level}
+                  </li>
+                ))}
+              </ul>
             </section>
           </aside>
         </div>
