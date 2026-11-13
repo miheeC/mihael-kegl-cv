@@ -824,8 +824,8 @@ button {
   font-size: 15px;
 }
 
-/* A project listed after the squad gets the divider instead. */
-.squad + .role {
+/* Projects listed after the squad get the divider instead. */
+.squad ~ .role {
   margin-top: 4px;
   padding-top: 14px;
   border-top: 1px solid var(--line);
@@ -971,7 +971,7 @@ blockquote {
   padding-top: 0;
 }
 
-.paper .squad + .role {
+.paper .squad ~ .role {
   margin-top: 14px;
   padding-top: 0;
   border-top: 0;

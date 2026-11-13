@@ -59,7 +59,7 @@ test('CV page lists every role and links to a PDF that exists', async ({ page, r
   for (const role of ['Quality Assurance Team Lead', 'Senior Quality Assurance Engineer', 'Quality Assurance Engineer']) {
     await expect(page.getByRole('heading', { name: role, exact: true })).toBeVisible();
   }
-  for (const project of ['QA Squad', 'Feature Dependency Visualizer']) {
+  for (const project of ['QA Squad', 'AI-assisted Playwright testing framework', 'Feature Dependency Visualizer']) {
     await expect(page.getByRole('heading', { name: project, exact: true })).toBeVisible();
   }
   const href = await page.getByRole('link', { name: 'Download PDF' }).getAttribute('href');
@@ -129,6 +129,7 @@ test('full hunt with the mouse: every bug behaves as its ticket says', async ({ 
     expect(await clickBug(page, 'race', { index: 1 })).toBe(true);
     const dialog = await expectTicket(page, 'Race Condition');
     await expect(dialog).toContainText('QA Squad');
+    await expect(dialog).toContainText('AI-assisted Playwright testing framework');
     await expect(dialog).toContainText('Feature Dependency Visualizer');
     await closeTicket(page);
   });

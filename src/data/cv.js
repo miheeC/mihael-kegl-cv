@@ -27,8 +27,8 @@ export const cv = {
       period: 'May 2026 – Present',
       bullets: [
         'Built QA Squad, an agentic QA framework where AI QA agents test every feature from different angles and a developer agent prepares fixes, while a human decides what gets filed.',
-        'Implemented AI-driven Playwright test automation with Claude Code.',
-        'Led QA for the AI-native platform relaunch and major pricing and billing changes.',
+        'Built an AI-assisted Playwright testing framework with the QA team: Claude Code skills turn plain-language user stories into verified tests.',
+        'Led QA on all critical projects while managing the QA team: planned the testing, decided who tests what and moved QA capacity to where the risk was.',
       ],
     },
     {
@@ -38,7 +38,7 @@ export const cv = {
       period: 'Jul 2021 – Apr 2026',
       bullets: [
         'Introduced a shift-left QA process, bringing QA into requirements and design reviews and validating every release with regression and smoke testing.',
-        'Owned release testing for web and mobile, and was the go-to QA for the product’s most critical areas, including billing and pricing.',
+        'Owned release testing for web and mobile, and was the go-to QA for the product’s most critical areas.',
         'Presented the company’s QA approach at the OTS 2025 conference and co-authored the published paper.',
         'Onboarded and mentored new QA engineers.',
       ],
@@ -78,6 +78,19 @@ export const cv = {
 
   projects: [
     {
+      id: 'playwright-framework',
+      title: 'AI-assisted Playwright testing framework',
+      period: '2026',
+      intro:
+        'A framework I built with the Databox QA team: a chain of Claude Code skills that turns a user story written in plain language into a working, verified Playwright test.',
+      bullets: [
+        'The agent reads the story, finds each UI element in the live app, then writes the test and page objects. Preconditions are set up through a seed API, not by clicking through the UI.',
+        'It runs the test against the live app, classifies every failure and fixes it. If the cause is an app bug, it stops and reports it instead of bending the test.',
+        'When the app changes, it repairs mechanical drift on its own and asks a human whenever behaviour changed. It never makes a test pass by weakening it.',
+        '260+ end-to-end tests so far, each one adding selectors and methods to a shared library.',
+      ],
+    },
+    {
       id: 'fdv',
       title: 'Feature Dependency Visualizer',
       period: '2024',
@@ -105,7 +118,7 @@ export const cv = {
       title: 'Playwright and Claude Code',
       period: '2026 – Present',
       intro:
-        'AI-written Playwright tests on seeded accounts. My coverage: the AI analyst, metrics, signup and login, user roles and client accounts.',
+        'A framework built with the QA team, where Claude Code skills turn plain-language user stories into verified Playwright tests. 260+ end-to-end tests so far; my own coverage includes the AI analyst, metrics, signup and login, user roles and client accounts.',
     },
   ],
 

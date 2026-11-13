@@ -32,7 +32,7 @@ Every push to `main` builds the site and publishes it to GitHub Pages (`.github/
 | Typo | Slow and in plain sight | Profile |
 | Flaky Test | Flickers; only catchable while lit | Test automation |
 | Regression | Comes back once after you catch it | Experience, all three roles |
-| Race Condition | Two racers; catching one catches both | Projects: QA Squad and the Feature Dependency Visualizer |
+| Race Condition | Two racers; catching one catches both | Projects: QA Squad, the AI-assisted Playwright framework and the Feature Dependency Visualizer |
 | Edge Case | Walks the outer sides of the desk, so you may need to rotate | Skills |
 | Memory Leak | Grows over time and leaves a trail | Education and languages |
 | Low Contrast | Camouflaged until you switch on the contrast check | Speaking and writing |
