@@ -187,27 +187,6 @@ button {
   cursor: grab;
 }
 
-.fallback {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  gap: 16px;
-  padding: 24px;
-  text-align: center;
-  justify-items: center;
-}
-
-.fallback h1 {
-  font-family: var(--display);
-  font-size: 40px;
-}
-
-.fallback p {
-  max-width: 44ch;
-  color: var(--soft);
-}
-
 /* ---------- top bar ---------- */
 
 .topbar {
@@ -921,6 +900,14 @@ blockquote {
 .cv-bar-right {
   display: flex;
   gap: 10px;
+}
+
+.cv-bar-note {
+  flex: 1 1 260px;
+  align-self: center;
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
 }
 
 .paper {

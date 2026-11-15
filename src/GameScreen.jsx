@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Game } from './game/Game.js';
 import { bugs, bugById } from './data/bugs.js';
-import { cv } from './data/cv.js';
 import Intro from './ui/Intro.jsx';
 import Hud from './ui/Hud.jsx';
 import Ticket from './ui/Ticket.jsx';
@@ -22,7 +21,7 @@ const writePref = (key, on) => {
   }
 };
 
-export default function GameScreen({ active }) {
+export default function GameScreen({ active, onUnavailable }) {
   const mount = useRef(null);
   const game = useRef(null);
   const toastTimer = useRef(0);
@@ -35,7 +34,6 @@ export default function GameScreen({ active }) {
   const [muted, setMuted] = useState(() => readPref('rb-muted'));
   const [finaleOpen, setFinaleOpen] = useState(false);
   const [elapsed, setElapsed] = useState(0);
-  const [failed, setFailed] = useState(false);
 
   const say = useCallback((message) => {
     setToast({ message, key: Date.now() });
@@ -57,7 +55,7 @@ export default function GameScreen({ active }) {
       });
     } catch (err) {
       console.error(err);
-      setFailed(true);
+      onUnavailable(); // App shows the CV in place of the game
       return undefined;
     }
     g.setMuted(readPref('rb-muted'));
@@ -68,7 +66,7 @@ export default function GameScreen({ active }) {
       g.dispose();
       game.current = null;
     };
-  }, [say]);
+  }, [say, onUnavailable]);
 
   useEffect(() => {
     game.current?.setRunning(active);
@@ -127,33 +125,22 @@ export default function GameScreen({ active }) {
   return (
     <div className="game" hidden={!active}>
       <div className="stage" ref={mount} />
-      {failed && (
-        <div className="fallback">
-          <h1>{cv.name}</h1>
-          <p>This portfolio is a small 3D game, and your browser could not start WebGL. The CV is one click away.</p>
-          <a className="btn primary" href="#cv">
-            Read the CV
-          </a>
-        </div>
-      )}
-      {!failed && (
-        <Hud
-          phase={phase}
-          caught={caught}
-          contrast={contrast}
-          muted={muted}
-          busy={ticket !== null}
-          onHint={() => hint()}
-          onChipHint={hint}
-          onChipCatch={(id) => game.current?.attemptById(id)}
-          onChipFocus={(id) => game.current?.focus(id)}
-          onOpenTicket={openTicket}
-          onContrast={toggleContrast}
-          onMuted={toggleMuted}
-          onSummary={phase === 'done' && !finaleOpen ? () => setFinaleOpen(true) : null}
-        />
-      )}
-      {!failed && phase === 'intro' && <Intro onStart={start} />}
+      <Hud
+        phase={phase}
+        caught={caught}
+        contrast={contrast}
+        muted={muted}
+        busy={ticket !== null}
+        onHint={() => hint()}
+        onChipHint={hint}
+        onChipCatch={(id) => game.current?.attemptById(id)}
+        onChipFocus={(id) => game.current?.focus(id)}
+        onOpenTicket={openTicket}
+        onContrast={toggleContrast}
+        onMuted={toggleMuted}
+        onSummary={phase === 'done' && !finaleOpen ? () => setFinaleOpen(true) : null}
+      />
+      {phase === 'intro' && <Intro onStart={start} />}
       <div className="toast-zone" role="status" aria-live="polite">
         {toast && !ticket && (
           <div className="toast" key={toast.key}>

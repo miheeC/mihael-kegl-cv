@@ -1,13 +1,19 @@
 import { cv } from '../data/cv.js';
 import { Education, Numbers, Projects, Publication, Role, Skills, Writing } from './SectionContent.jsx';
 
-export default function CvPage() {
+export default function CvPage({ gameAvailable = true }) {
   return (
     <div className="cv-page">
       <nav className="cv-bar" aria-label="CV actions">
-        <a className="btn ghost" href="#">
-          ← Back to the bug hunt
-        </a>
+        {gameAvailable ? (
+          <a className="btn ghost" href="#">
+            ← Back to the bug hunt
+          </a>
+        ) : (
+          <p className="cv-bar-note">
+            This CV is also a small 3D bug hunt. It needs WebGL, which is switched off in this browser.
+          </p>
+        )}
         <span className="cv-bar-right">
           <a className="btn ghost" href="./Mihael_Kegl_CV.pdf" download>
             Download PDF
