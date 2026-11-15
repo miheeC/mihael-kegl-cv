@@ -30,7 +30,7 @@ export const cv = {
   numbers: [
     ticketsFiled,
     { value: '640+', label: 'Katalon test cases written and maintained' },
-    { value: '260+', label: 'Playwright test cases written and maintained' },
+    { value: '260+', label: 'Playwright test cases written and maintained with my team' },
     { value: '480+', label: 'issues found by QA Squad' },
     { value: '20,000+', label: 'impressions on the QA Squad post' },
   ],
@@ -46,8 +46,7 @@ export const cv = {
         'Built QA Squad, an agentic QA framework that cut the testing of each feature from weeks to hours and has found 480+ issues: AI QA agents test every feature from different angles and a developer agent prepares fixes, while a human decides what gets filed.',
         'Built an AI-assisted Playwright framework with the QA team: Claude Code skills let everyone write and fix tests as plain-English user stories.',
         'Led QA on all projects and managed a QA team of three: planned the testing, assigned the work and moved capacity to where the risk was.',
-        'Tested Genie, the product’s LLM-based AI analyst. Its answers are non-deterministic, so the tests check outcomes, not exact wording.',
-        'Fixed smaller bugs I found in the product code: 15+ merged PRs.',
+        'Evaluated the consistency and reliability of Genie, an LLM-powered AI analyst, by testing response variability across repeated identical queries.',
       ],
     },
     {
@@ -69,10 +68,10 @@ export const cv = {
       company: 'Databox',
       period: 'Aug 2018 – Jun 2021',
       bullets: [
-        'Built the end-to-end automation framework in Katalon Studio (Selenium) and grew it to 640+ test cases with 80 integration suites, run as deployment gates and periodically on staging and production.',
+        'Built the end-to-end automation framework in Katalon Studio (Selenium) and grew it by 2024 to 640+ test cases with 80 integration suites, run as deployment gates and periodically on staging and production.',
         'Tested every feature before release, reported the bugs I found and owned each one until it was fixed.',
         'Wrote product specs and analysed thousands of new-user session recordings to propose product improvements.',
-        'Started a company-wide initiative for collecting and fixing small product-polish issues.',
+        'Started the “Small steps to make Databox perfect” initiative, which brought in 50+ reports from colleagues and got 90% of them fixed or implemented: a form where anyone in the company could flag the little product pains that seemed too small to report.',
       ],
     },
   ],
@@ -115,7 +114,7 @@ export const cv = {
         'It runs the test against the live app, classifies every failure and fixes it. If the cause is an app bug, it stops and reports it instead of bending the test.',
         'When the app changes, it repairs mechanical drift on its own and asks a human whenever behaviour changed. It never makes a test pass by weakening it.',
         'Helped connect the tests to the CI/CD pipeline: each new version of a service gets its own temporary test environment, and the tests run against it automatically.',
-        '260+ end-to-end tests so far, each one adding selectors and methods to a shared library.',
+        'My team and I have written and maintain 260+ end-to-end tests so far, each one adding selectors and methods to a shared library.',
       ],
     },
     {
@@ -146,7 +145,7 @@ export const cv = {
       title: 'Playwright and Claude Code',
       period: '2026',
       intro:
-        'A framework built with the QA team, where Claude Code skills turn plain-language user stories into verified Playwright tests. I have written 260+ end-to-end tests with it so far, covering the AI analyst, metrics, signup and login, user roles and client accounts.',
+        'A framework built with the QA team, where Claude Code skills turn plain-language user stories into verified Playwright tests. My team and I have written and maintain 260+ end-to-end tests with it so far, covering the AI analyst, metrics, signup and login, user roles and client accounts.',
     },
   ],
 
@@ -191,6 +190,7 @@ export const cv = {
         'Multi-agent systems',
         'Model Context Protocol (MCP)',
         'Prompt engineering',
+        'LangSmith',
       ],
     },
     { group: 'Code', items: ['TypeScript', 'JavaScript', 'Node.js', 'Python', 'HTML/CSS', 'D3.js', 'MongoDB'] },

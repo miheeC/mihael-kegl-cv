@@ -10,7 +10,7 @@ export const bugs = [
     color: '#ff6b6b',
     behavior: 'Slow, obvious, sitting in plain sight. It still ships more often than anyone admits.',
     lesson:
-      'The small stuff is what users notice first. In 2020 Mihael started “Small steps to make Databox perfect”, a list where anyone in the company could report a polish issue. He still files the typos himself: the latest was “prority support”.',
+      'The small stuff is what users notice first. In 2020 Mihael started the “Small steps to make Databox perfect” initiative: a form where anyone in the company could flag the little product pains that bugged them but seemed too small to report. Colleagues sent in 50+ reports and 90% of them were fixed or implemented.',
     section: 'profile',
     sectionTitle: 'Profile',
     hint: 'Typo: right in front of the laptop, in plain sight.',
@@ -52,7 +52,7 @@ export const bugs = [
     color: '#3fd9ff',
     behavior: 'Two bugs sprinting laps around the desk. Catch either one: it was the same bug all along.',
     lesson:
-      'Parallel work collides unless something coordinates it. Mihael’s QA Squad runs five AI agents on one feature at the same time, each in its own browser, with an orchestrator keeping them in sync.',
+      'Parallel work collides unless something coordinates it. Mihael’s QA Squad runs five AI QA agents on one feature at the same time, each in its own browser, and one AI developer agent prepares the fixes. An orchestration layer sits above them all and manages the communication between them.',
     section: 'projects',
     sectionTitle: 'Projects',
     hint: 'Race Condition: two blue streaks doing laps. Click just ahead of one.',
@@ -94,7 +94,7 @@ export const bugs = [
     color: '#ff5fd2',
     behavior: 'Almost the same colour as the desk mat. It fails WCAG 1.4.3 until you switch on the contrast check.',
     lesson:
-      'If part of your audience cannot read it, it is a bug, however good it looks. Mihael wrote about why accessibility checks belong next to functional testing, taught his visual QA agent to measure contrast in light and dark mode, and co-authored the QA paper presented at OTS 2025.',
+      'If part of your audience cannot read it, it is a bug, however good it looks. Mihael wrote about why accessibility checks belong next to functional testing, taught his visual QA agent to measure contrast in light and dark mode, and co-authored the QA paper he presented solo at OTS 2025.',
     section: 'speaking',
     sectionTitle: 'Speaking and publications',
     hint: 'Low Contrast: switch on “Contrast check” in the top bar.',

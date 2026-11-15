@@ -1220,7 +1220,7 @@ blockquote {
 
 @page {
   size: A4;
-  margin: 11mm 14mm;
+  margin: 10mm 14mm;
 }
 
 @media print {
@@ -1277,7 +1277,7 @@ blockquote {
   .cv-grid {
     grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
     gap: 26px;
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   .cv-main,
@@ -1324,8 +1324,9 @@ blockquote {
     font-size: 11px;
   }
 
+  /* Kept tight so all three roles fit on page one of the PDF. */
   .paper .role + .role {
-    margin-top: 6px;
+    margin-top: 2px;
   }
 
   .numbers {
