@@ -169,6 +169,9 @@ export function ContactLinks() {
       <a className="btn primary" href={cv.linkedin} target="_blank" rel="noreferrer">
         Message me on {cv.linkedinLabel}
       </a>
+      <a className="btn ghost" href={`mailto:${cv.email}`}>
+        Email {cv.email}
+      </a>
       <a className="btn ghost" href="./Mihael_Kegl_CV.pdf" download>
         Download CV (PDF)
       </a>

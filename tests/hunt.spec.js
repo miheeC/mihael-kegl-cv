@@ -169,6 +169,7 @@ test('full hunt with the mouse: every bug behaves as its ticket says', async ({ 
     expect(await clickBug(page, 'heisen')).toBe(true);
     const dialog = await expectTicket(page, 'Heisenbug');
     await expect(dialog.getByRole('link', { name: /linkedin\.com\/in\/mihaelkegl/ })).toBeVisible();
+    await expect(dialog.getByRole('link', { name: /^Email / })).toHaveAttribute('href', /^mailto:.+@gmail\.com$/);
     await dialog.getByRole('button', { name: /Ship the release/ }).click();
   });
 
